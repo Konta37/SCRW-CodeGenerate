@@ -38,18 +38,18 @@ document.getElementById("generateBtn").addEventListener("click", function () {
 
   // Kiểm tra độ dài và chữ in hoa
   if (nameValue.length !== 4 || !/^[A-Z]+$/.test(nameValue)) {
-    alert("Name phải có đúng 4 ký tự và là chữ in hoa!");
+    alert("Name must have 4 character and uppercase");
     return;
   }
   console.log("Code nhập vào:", codeValue);
   if (codeValue.length !== 6) {
-    alert("Code phải có đúng 6 ký tự!");
+    alert("Code must have 6 characters");
     return;
   }
   // check every character in nameValue has value in the letterValues
   for (let i = 0; i < 4; i++) {
     if (!letterValues[nameValue[i]]) {
-      alert(`Ký tự ${nameValue[i]} không hợp lệ!`);
+      alert(`Character ${nameValue[i]} is not valid!`);
       return;
     }
   }
